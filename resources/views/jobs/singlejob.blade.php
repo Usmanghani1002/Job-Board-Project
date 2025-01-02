@@ -21,7 +21,7 @@
 
         
         <div class="pt-10 pb-10">
-            <span class="leading-7">{{$job->description}}</span>
+            <span class="leading-7">{!! nl2br($job->description)!!}</span>
         </div>
 
         <h2 class="text-2xl font-bold"> Requirements</h2>
