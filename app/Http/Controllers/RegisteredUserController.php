@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Validation\Rules\File;
 
 class RegisteredUserController extends Controller
 {
@@ -31,7 +32,7 @@ class RegisteredUserController extends Controller
 
         $employerAttributes = $request->validate([
             'employer' => ['required'],
-            'logo' => ['required','File::type(png,jpg,jpeg,webp)'],
+            'logo' => ['required',File::types(['png','jpg','jpeg','webp'])],
         ]);
 
         $user = User::create($userAttributes);

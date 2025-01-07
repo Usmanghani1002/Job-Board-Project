@@ -19,7 +19,7 @@ Route::get('/tags/{tag:name}', TagController::class); //tag/frontend
 Route::middleware('guest')->group(function(){
     Route::get('/register',[RegisteredUserController::class,'create'])->name('register');
     Route::post('/register',[RegisteredUserController::class,'store']);
-    Route::get('/login',[LoginUserController::class,'create']);
+    Route::get('/login',[LoginUserController::class,'create'])->name('login');
     Route::post('/login',[LoginUserController::class,'store']);
 });
 

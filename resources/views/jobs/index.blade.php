@@ -28,7 +28,7 @@
          </section>
  
          <section>
-             <x-section-heading> Featured Jobs </x-section-heading>
+             <x-section-heading> Recent Jobs </x-section-heading>
              <div class="space-y-6 mt-6">
                 @foreach ($jobs as $job)
                     <x-job-card-wide :$job/>

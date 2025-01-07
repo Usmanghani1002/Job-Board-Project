@@ -1,6 +1,6 @@
 <x-layout>
 <x-page-heading> Job Details </x-page-heading>
-<div class="flex flex-col md:flex-row gap-x-6">
+<div class="flex flex-col md:flex-row gap-x-6 pt-5">
     
     <div class="flex-1 flex flex-col">
        
@@ -9,12 +9,11 @@
         </div>
    
         <div class="flex-1">
-            <h2 class="font-bold text-3xl pt-1 group-hover:text-blue-600 transition duration-300 mb-6 mt-5">
-                <a href="/jobs/{{ Str::slug($job->title) }}">
-                    {{$job->title}}
-                </a>
-            </h2>
-
+            <div class="flex items-center justify-between">
+                <h2 class="font-bold text-3xl pt-1 group-hover:text-blue-600 transition duration-300 mb-6 mt-5">         
+                        {{$job->title}}
+                </h2>
+            </div>
             
             <img src="https://demo.flawlessthemes.com/espyjobspro/wp-content/uploads/2022/06/listing-hero-image-3.jpg" alt="" class="rounded-md w-full mb-5" width="100">
         </div>
